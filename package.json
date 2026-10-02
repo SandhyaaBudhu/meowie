@@ -1,0 +1,21 @@
+{
+  "name": "meowies-little-adventure",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node scripts/test-game.mjs",
+    "test:production": "node scripts/smoke-production.mjs"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.9"
+  }
+}
