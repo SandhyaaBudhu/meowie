@@ -123,14 +123,14 @@ export const fences: Obstacle[] = [
 export const pond = { x: 1300, y: 820, w: 370, h: 260 };
 export const sardineSpots = [
   { x: 1150, y: 1100, label: "The welcome path" },
-  { x: 450, y: 805, label: "The flower garden" },
-  { x: 580, y: 430, label: "The little cottage" },
-  { x: 1060, y: 625, label: "Behind the reading bench" },
+  { x: 450, y: 780, label: "The flower garden" },
+  { x: 520, y: 425, label: "The little cottage" },
+  { x: 1060, y: 580, label: "The reading path" },
   { x: 1550, y: 860, label: "The pond’s eastern bank" },
-  { x: 2070, y: 635, label: "The café terrace" },
-  { x: 2250, y: 1060, label: "Past the café" },
-  { x: 1940, y: 1390, label: "The kitchen garden" },
-  { x: 1160, y: 1510, label: "The stepping stones" },
+  { x: 2040, y: 545, label: "The café terrace" },
+  { x: 2030, y: 1050, label: "Past the café" },
+  { x: 1790, y: 1295, label: "The kitchen garden" },
+  { x: 1260, y: 1435, label: "The stepping stones" },
   { x: 620, y: 1410, label: "The cardboard hideaway" },
 ];
 export const interactions = [

@@ -56,6 +56,21 @@ try {
   await page.waitForSelector("#loading", { state: "hidden" });
   assert.equal((await snapshot()).total, 10);
   record("Exactly ten collectibles at boot");
+  const coveredFish = await page.evaluate(() => {
+    const scene = window.__miso.ui.scene;
+    const scenery = scene.children.list.filter(object => object.texture &&
+      !['garden', 'fish', 'bird', 'butterfly'].includes(object.texture.key) &&
+      !object.texture.key.startsWith('cat-'));
+    return scene.sardines.flatMap(fish => scenery.filter(object => {
+      if (object.depth < fish.sprite.depth) return false;
+      const bounds = object.getBounds();
+      // Include the largest fish scale, rotation, bobbing and surrounding glow.
+      return fish.x - 36 < bounds.right && fish.x + 36 > bounds.left &&
+        fish.y - 30 < bounds.bottom && fish.y + 30 > bounds.top;
+    }).map(object => `${fish.label} is covered by ${object.texture.key}`));
+  });
+  assert.deepEqual(coveredFish, []);
+  record("All ten sardines stay clear of foreground artwork, including their glow and bobbing");
   assert.match(await page.title(), /Meowie/);
   const coats = ["tuxedo-blaze", "tuxedo-mask", "tabby-socks", "tabby"];
   assert.equal(await page.getByRole("radio").count(), 4);
