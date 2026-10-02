@@ -181,7 +181,9 @@ export class GardenScene extends Phaser.Scene {
           ? "chime"
           : target.id === "yarn"
             ? "paw"
-            : "interact",
+            : target.id === "box"
+              ? "meow"
+              : "interact",
     );
     this.bridge.message(target.message);
     this.interactionEffects.play(target, this.player.sprite);
