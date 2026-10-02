@@ -41,7 +41,7 @@ export class UI implements GameBridge {
       <div id="interaction" class="interaction hidden"><kbd>E</kbd><span></span></div>
       <div id="toast" class="toast hidden" role="status"></div>
       <div id="touch-controls" class="touch-controls hidden"><div id="joystick" role="group" aria-label="Movement joystick"><div class="joystick-cross"></div><div id="joystick-knob">${icon("paw")}</div></div><button id="touch-interact" aria-label="Interact with nearby object">E<span>EXPLORE</span></button></div>
-      <footer id="credits" class="credits"><span>A SMALL WORLD, A SOFT LANDING.</span><button data-action="about">Made by Your Name <span>↗</span></button></footer>
+      <footer id="credits" class="credits"><span>A SMALL WORLD, A SOFT LANDING.</span><button data-action="about">Made by Sandy <span>↗</span></button></footer>
       <div id="modal-layer" class="modal-layer hidden"><div class="modal-backdrop"></div><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
       <div id="loading" class="loading"><span class="brand-icon">${icon("paw")}</span><p>A little garden is growing…</p></div>
       <div id="confetti" aria-hidden="true"></div>`;
@@ -236,7 +236,7 @@ export class UI implements GameBridge {
     this.prepareModal();
     this.show(
       "about",
-      `<button class="modal-close icon-button" data-action="close" aria-label="Close about">${icon("close")}</button><div class="modal-symbol">${icon("paw")}</div><p class="eyebrow">SMALL BY DESIGN</p><h2 id="modal-title">A little world<br>to get lost in.</h2><p><em>Meowie’s Little Adventure</em> is a short interactive browser-game demonstration, made for a portfolio and a few peaceful minutes of play.</p><div class="tech-tags"><span>Phaser</span><span>TypeScript</span><span>Vite</span></div><p class="about-detail">Original vector illustrations. A hand-designed garden. Tiny generated sounds. One exceptionally curious cat.</p><div class="portfolio-credit">Created by <strong>Your Name</strong><span>Add your portfolio link here · see README</span></div><button class="primary" data-action="close">Back to the garden ${icon("arrow")}</button>`,
+      `<button class="modal-close icon-button" data-action="close" aria-label="Close about">${icon("close")}</button><div class="modal-symbol">${icon("paw")}</div><p class="eyebrow">SMALL BY DESIGN</p><h2 id="modal-title">A little world<br>to get lost in.</h2><p><em>Meowie’s Little Adventure</em> is a short interactive browser-game demonstration, made for a portfolio and a few peaceful minutes of play.</p><div class="tech-tags"><span>Phaser</span><span>TypeScript</span><span>Vite</span></div><p class="about-detail">Original vector illustrations. A hand-designed garden. Tiny generated sounds. One exceptionally curious cat.</p><div class="portfolio-credit">Created by <strong>Sandy</strong></div><button class="primary" data-action="close">Back to the garden ${icon("arrow")}</button>`,
     );
   }
   complete() {

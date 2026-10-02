@@ -66,9 +66,9 @@ The map is intentionally authored in `src/config/world.ts`. Major objects use Ar
 
 Edit **`src/ui/UI.ts`**:
 
-- Replace `Your Name` in the footer and the information overlay.
+- The footer and information overlay credit `Sandy`; edit the name here to change it.
 - Replace the footer credit button with an anchor pointing to your portfolio URL if desired; preserve the `credits` class styling.
-- In `.portfolio-credit`, replace the placeholder sentence with your portfolio link.
+- Add a portfolio link to `.portfolio-credit` if needed.
 
 The “A little about this” overlay explains the demonstration and its technologies. No external images, fonts, audio files, analytics, or APIs are required by the game. The illustrations and generated sounds were created specifically for this project.
 
